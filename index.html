@@ -3,501 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Portfólio de Julia Oliveira, desenvolvedora Front-end e Back-end.">
-
-    <title>Julia Oliveira — Desenvolvedora Full Stack</title>
-
+    <title>Julia Oliveira | Frontend Developer</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
+    <!-- Barra de Progresso de Leitura -->
+    <div id="progress-bar"></div>
 
-    <header class="header">
-        <nav class="nav container">
+    <!-- Cursor Personalizado Avançado -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
 
-            <a href="#inicio" class="logo">
-                JO<span>.</span>
-            </a>
+    <!-- Facho de luz de fundo -->
+    <div id="cursor-light"></div>
 
-            <button class="menu-button" id="menuButton" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="navLinks">
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#contato">Contato</a>
-            </div>
-
+    <!-- Header Inteligente -->
+    <header id="main-header">
+        <div class="logo hover-target">JO<span>.</span></div>
+        <nav>
+            <a href="#sobre" class="hover-target">Sobre</a>
+            <a href="#projetos" class="hover-target">Projetos</a>
+            <a href="#contato" class="hover-target">Contato</a>
         </nav>
     </header>
 
+    <!-- Apresentação Principal com Parallax -->
+    <section class="hero" id="sobre">
+        <div class="hero-text reveal">
+            <span class="badge">Desenvolvedora Web Frontend</span>
+            <h1>Julia Oliveira</h1>
+            <p>Criando interfaces de alto impacto, experiências intuitivas e código limpo para marcas modernas.</p>
+            <div class="cta-buttons">
+                <a href="#projetos" class="btn btn-primary hover-target">Ver Projetos ↗</a>
+                <a href="#contato" class="btn btn-secondary hover-target">Contato</a>
+            </div>
+        </div>
+        <div class="hero-image-container reveal parallax-element" data-speed="0.05">
+            <div class="image-frame">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" alt="Foto de Julia Oliveira" class="hero-image">
+            </div>
+        </div>
+    </section>
 
-    <main>
+    <!-- Seção de Projetos -->
+    <section class="projects-section" id="projetos">
+        <div class="section-header reveal">
+            <h2>Projetos Selecionados</h2>
+            <p>Explore as aplicações e experiências interativas que desenvolvi.</p>
+        </div>
 
-        <!-- HERO -->
-
-        <section class="hero" id="inicio">
-
-            <div class="hero-grid container">
-
-                <div class="hero-content">
-
-                    <p class="eyebrow">
-                        <span></span>
-                        Desenvolvedora Full Stack
-                    </p>
-
-                    <h1>
-                        Transformo ideias em
-                        <em>experiências digitais.</em>
-                    </h1>
-
-                    <p class="hero-description">
-                        Olá, eu sou Julia Oliveira. Desenvolvedora Front-end
-                        e Back-end apaixonada por criar aplicações modernas,
-                        funcionais e visualmente marcantes.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#projetos" class="button button-dark">
-                            Ver projetos
-                            <span>↗</span>
-                        </a>
-
-                        <a href="#contato" class="button button-outline">
-                            Entre em contato
-                        </a>
-
-                    </div>
-
-                    <div class="hero-stack">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Backend</span>
-                    </div>
-
+        <div class="projects-grid">
+            
+            <div class="project-card reveal hover-target">
+                <div class="preview-wrapper">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Projeto 1" class="project-preview">
                 </div>
-
-
-                <div class="hero-visual">
-
-                    <div class="image-frame">
-
-                        <img src="images/julia.jpg"
-                             alt="Julia Oliveira, desenvolvedora">
-
-                        <div class="image-overlay"></div>
-
+                <div class="project-info">
+                    <h3 class="project-title">E-Commerce Minimalista</h3>
+                    <p class="project-description">Plataforma de vendas focada em alta performance, navegação intuitiva e animações de estado.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">UI/UX</span>
                     </div>
-
-                    <div class="floating-card">
-
-                        <div class="status-dot"></div>
-
-                        <div>
-                            <strong>Disponível</strong>
-                            <small>para novos projetos</small>
-                        </div>
-
-                    </div>
-
-                    <div class="number">01</div>
-
+                    <a href="https://seusiteaqui.com" target="_blank" class="project-link">Navegar no Site Live ↗</a>
                 </div>
-
             </div>
 
-        </section>
-
-
-        <!-- SOBRE -->
-
-        <section class="about section" id="sobre">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="eyebrow">
-                        <span></span>
-                        Sobre mim
-                    </p>
-
-                    <h2>
-                        Código com propósito,
-                        <em>design com intenção.</em>
-                    </h2>
+            <div class="project-card reveal hover-target">
+                <div class="preview-wrapper">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Projeto 2" class="project-preview">
                 </div>
-
-
-                <div class="about-grid">
-
-                    <div class="about-text">
-
-                        <p class="large-text">
-                            Sou Julia, uma desenvolvedora que acredita que
-                            tecnologia e design devem trabalhar juntos.
-                        </p>
-
-                        <p>
-                            Desenvolvo interfaces modernas e responsivas no
-                            Front-end e também construo a estrutura por trás
-                            das aplicações no Back-end.
-                        </p>
-
-                        <p>
-                            Meu objetivo é transformar problemas em soluções
-                            digitais simples, rápidas e agradáveis de usar.
-                        </p>
-
+                <div class="project-info">
+                    <h3 class="project-title">Dashboard Analítico</h3>
+                    <p class="project-description">Interface de monitoramento em tempo real com visualização interativa de métricas complexas.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind</span>
+                        <span class="tag">API Rest</span>
                     </div>
-
-
-                    <div class="about-info">
-
-                        <div class="info-item">
-                            <span>01</span>
-                            <div>
-                                <h3>Front-end</h3>
-                                <p>
-                                    Interfaces responsivas, acessíveis e
-                                    focadas na experiência do usuário.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <span>02</span>
-                            <div>
-                                <h3>Back-end</h3>
-                                <p>
-                                    APIs, bancos de dados e sistemas
-                                    estruturados para aplicações reais.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <span>03</span>
-                            <div>
-                                <h3>Performance</h3>
-                                <p>
-                                    Código limpo, organizado e pensado
-                                    para crescer junto com o projeto.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
+                    <a href="https://seusiteaqui.com" target="_blank" class="project-link">Navegar no Site Live ↗</a>
                 </div>
-
             </div>
 
-        </section>
-
-
-        <!-- PROJETOS -->
-
-        <section class="projects section" id="projetos">
-
-            <div class="container">
-
-                <div class="projects-top">
-
-                    <div class="section-heading">
-                        <p class="eyebrow">
-                            <span></span>
-                            Portfólio
-                        </p>
-
-                        <h2>
-                            Projetos que
-                            <em>falam por mim.</em>
-                        </h2>
+            <div class="project-card reveal hover-target">
+                <div class="preview-wrapper">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop" alt="Projeto 3" class="project-preview">
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Plataforma SaaS</h3>
+                    <p class="project-description">Landing page interativa projetada para alta conversão com micro-interações ao longo do scroll.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">SEO</span>
                     </div>
-
-                    <p class="projects-intro">
-                        Uma seleção de trabalhos desenvolvidos com foco em
-                        design, tecnologia e experiência.
-                    </p>
-
+                    <a href="https://seusiteaqui.com" target="_blank" class="project-link">Navegar no Site Live ↗</a>
                 </div>
-
-
-                <div class="projects-grid">
-
-                    <!-- PROJETO 1 -->
-
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/projeto-1.jpg"
-                                 alt="Projeto desenvolvido por Julia">
-
-                            <a href="#" class="project-link">
-                                ↗
-                            </a>
-
-                        </div>
-
-                        <div class="project-info">
-
-                            <div>
-                                <span class="project-number">01</span>
-                                <h3>Projeto Alpha</h3>
-                            </div>
-
-                            <p>
-                                Website moderno e responsivo
-                                desenvolvido para uma marca digital.
-                            </p>
-
-                            <div class="tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJETO 2 -->
-
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/projeto-2.jpg"
-                                 alt="Projeto desenvolvido por Julia">
-
-                            <a href="#" class="project-link">
-                                ↗
-                            </a>
-
-                        </div>
-
-                        <div class="project-info">
-
-                            <div>
-                                <span class="project-number">02</span>
-                                <h3>Projeto Studio</h3>
-                            </div>
-
-                            <p>
-                                Landing page com identidade visual
-                                sofisticada e experiência responsiva.
-                            </p>
-
-                            <div class="tags">
-                                <span>UI</span>
-                                <span>Front-end</span>
-                                <span>Responsive</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJETO 3 -->
-
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/projeto-3.jpg"
-                                 alt="Projeto desenvolvido por Julia">
-
-                            <a href="#" class="project-link">
-                                ↗
-                            </a>
-
-                        </div>
-
-                        <div class="project-info">
-
-                            <div>
-                                <span class="project-number">03</span>
-                                <h3>Projeto Core</h3>
-                            </div>
-
-                            <p>
-                                Aplicação web com integração entre
-                                Front-end, Back-end e banco de dados.
-                            </p>
-
-                            <div class="tags">
-                                <span>Backend</span>
-                                <span>API</span>
-                                <span>Database</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- HABILIDADES -->
-
-        <section class="skills section" id="habilidades">
-
-            <div class="container">
-
-                <div class="skills-grid">
-
-                    <div class="section-heading">
-
-                        <p class="eyebrow">
-                            <span></span>
-                            Stack
-                        </p>
-
-                        <h2>
-                            Ferramentas para
-                            <em>construir o futuro.</em>
-                        </h2>
-
-                    </div>
-
-
-                    <div class="skills-list">
-
-                        <div class="skill">
-                            <span>01</span>
-                            <strong>HTML & CSS</strong>
-                            <small>Interfaces modernas</small>
-                        </div>
-
-                        <div class="skill">
-                            <span>02</span>
-                            <strong>JavaScript</strong>
-                            <small>Interações e aplicações</small>
-                        </div>
-
-                        <div class="skill">
-                            <span>03</span>
-                            <strong>Front-end</strong>
-                            <small>Experiências responsivas</small>
-                        </div>
-
-                        <div class="skill">
-                            <span>04</span>
-                            <strong>Back-end</strong>
-                            <small>APIs e sistemas</small>
-                        </div>
-
-                        <div class="skill">
-                            <span>05</span>
-                            <strong>Banco de dados</strong>
-                            <small>Dados estruturados</small>
-                        </div>
-
-                        <div class="skill">
-                            <span>06</span>
-                            <strong>Git & GitHub</strong>
-                            <small>Versionamento</small>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTATO -->
-
-        <section class="contact section" id="contato">
-
-            <div class="container">
-
-                <div class="contact-box">
-
-                    <p class="eyebrow">
-                        <span></span>
-                        Vamos conversar?
-                    </p>
-
-                    <h2>
-                        Tem uma ideia?
-                        <em>Vamos construir.</em>
-                    </h2>
-
-                    <p>
-                        Estou aberta a projetos, oportunidades e
-                        colaborações.
-                    </p>
-
-                    <a href="mailto:seuemail@email.com"
-                       class="contact-email">
-                        seuemail@email.com
-                        <span>↗</span>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer class="footer">
-
-        <div class="container footer-content">
-
-            <a href="#inicio" class="logo">
-                JO<span>.</span>
-            </a>
-
-            <p>
-                © 2026 Julia Oliveira. Desenvolvido com código e criatividade.
-            </p>
-
-            <div class="socials">
-                <a href="#" aria-label="GitHub">GH</a>
-                <a href="#" aria-label="LinkedIn">LI</a>
-                <a href="#" aria-label="Instagram">IG</a>
             </div>
 
         </div>
+    </section>
 
+    <!-- Rodapé -->
+    <footer id="contato" class="reveal">
+        <h2>Vamos tirar sua ideia do papel?</h2>
+        <p>Estou disponível para projetos *freelance* e oportunidades em tempo integral.</p>
+        <a href="mailto:seuemail@exemplo.com" class="btn btn-primary hover-target">Iniciar conversa</a>
+        <p class="copyright">© 2026 Julia Oliveira. Desenvolvido com foco em performance e detalhe visual.</p>
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
 </html>
-
-
