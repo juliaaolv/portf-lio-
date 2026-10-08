@@ -24,6 +24,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    
 }
 
 /* Barra de Progresso no Topo */
@@ -452,5 +453,311 @@ footer p {
 
     .section-header h2 {
         font-size: 1.8rem;
+    }
+}
+
+/* --- ESTÚDIO DE TEMAS E INTERAÇÃO RESPONSIVA --- */
+
+.theme-picker-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.theme-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.theme-chip:hover, .theme-chip.active {
+    border-color: var(--hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.dot-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dark-dot { background: #ffffff; }
+.cyber-dot { background: #ff007f; }
+.emerald-dot { background: #10b981; }
+.light-dot { background: #111111; }
+
+/* PALETAS DE CORES */
+body.theme-cyber {
+    --bg-primary: #090514;
+    --bg-secondary: #120a24;
+    --bg-card: #1a0f33;
+    --text-primary: #ffffff;
+    --text-secondary: #a855f7;
+    --accent: #ff007f;
+    --border: #31155e;
+    --hover-border: #ff007f;
+}
+
+body.theme-emerald {
+    --bg-primary: #04100c;
+    --bg-secondary: #081e17;
+    --bg-card: #0e2a21;
+    --text-primary: #f0fdf4;
+    --text-secondary: #34d399;
+    --accent: #10b981;
+    --border: #164e3d;
+    --hover-border: #34d399;
+}
+
+body.theme-light {
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-card: #f1f3f5;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --accent: #000000;
+    --border: #e0e0e0;
+    --hover-border: #000000;
+}
+
+/* Suporte para celular na área de temas */
+@media (max-width: 600px) {
+    .theme-chip {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* --- CANVAS TEIA INTERATIVA --- */
+
+.canvas-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.canvas-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.canvas-btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-primary);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.canvas-btn:hover {
+    border-color: var(--hover-border);
+    transform: translateY(-2px);
+}
+
+.canvas-btn.active {
+    background: #5b50f6; /* Tom violeta/azul em destaque idêntico à imagem */
+    border-color: #5b50f6;
+    color: #ffffff;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background: #000000;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#teiaCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.canvas-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 8%;
+    background: rgba(10, 10, 12, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-family: monospace;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+}
+
+/* Esconde suavemente o aviso */
+.canvas-hint.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+@media (max-width: 600px) {
+    .canvas-wrapper {
+        height: 320px;
+    }
+    .canvas-controls {
+        justify-content: center;
+    }
+    .canvas-btn {
+        flex: 1 1 calc(50% - 12px);
+        text-align: center;
+    }
+}
+
+/* --- CANVAS BORDA INFINITA & SELETOR DE CORES --- */
+
+.canvas-section-full {
+    padding: 80px 0 0 0;
+    background-color: var(--bg-primary);
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    padding: 0 8%;
+}
+
+.canvas-full-wrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #000000;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.canvas-header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(8, 8, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.canvas-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.canvas-btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.canvas-btn:hover {
+    border-color: var(--hover-border);
+    transform: translateY(-2px);
+}
+
+.canvas-btn.active {
+    background: #5b50f6;
+    border-color: #5b50f6;
+    color: #ffffff;
+}
+
+/* Seletor de Cores da Teia */
+.color-picker-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.color-btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.color-btn:hover, .color-btn.active {
+    transform: scale(1.25);
+    border-color: #ffffff;
+}
+
+/* Área Maior do Canvas */
+.canvas-container-full {
+    position: relative;
+    width: 100%;
+    height: 550px; /* Maior e imersivo */
+}
+
+#teiaCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.canvas-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 8%;
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .canvas-container-full {
+        height: 400px;
+    }
+    .canvas-header-controls {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
