@@ -19,7 +19,6 @@
 
     <div id="custom-cursor"></div>
     <div id="cursor-follower"></div>
-
     <div id="cursor-light"></div>
 
     <header id="main-header">
@@ -27,10 +26,12 @@
         <nav>
             <a href="#sobre" class="hover-target">Sobre</a>
             <a href="#projetos" class="hover-target">Projetos</a>
-            <a href="#contato" class="hover-target">Contato</a>
+            <a href="#estudio" class="hover-target">Temas</a>
+            <a href="#canvas-lab" class="hover-target">Canvas </a>
         </nav>
     </header>
 
+    <!-- Hero Section Original -->
     <section class="hero" id="sobre">
         <div class="hero-text reveal">
             <span class="badge">Desenvolvedora Web Frontend</span>
@@ -38,7 +39,7 @@
             <p>Criando interfaces de alto impacto, experiências intuitivas e código limpo.</p>
             <div class="cta-buttons">
                 <a href="#projetos" class="btn btn-primary hover-target">Ver Projetos ↗</a>
-                <a href="#contato" class="btn btn-secondary hover-target">Contato</a>
+                <a href="#estudio" class="btn btn-secondary hover-target">Personalizar Cores </a>
             </div>
         </div>
         <div class="hero-image-container reveal parallax-element" data-speed="0.05">
@@ -48,6 +49,7 @@
         </div>
     </section>
 
+    <!-- Projetos Originais -->
     <section class="projects-section" id="projetos">
         <div class="section-header reveal">
             <h2>Projetos Selecionados</h2>
@@ -73,7 +75,7 @@
                 </div>
             </div>
 
-         <!-- Projeto 2: Carros Vintage -->
+            <!-- Projeto 2: Carros Vintage -->
             <div class="project-card reveal hover-target">
                 <div class="preview-wrapper">
                     <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop" alt="Projeto Carros Vintage" class="project-preview">
@@ -90,29 +92,81 @@
                 </div>
             </div>
 
-         <!-- Projeto 3: Validador de Tags HTML em C -->
-<div class="project-card reveal hover-target">
-    <div class="preview-wrapper">
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Validador de Tags HTML" class="project-preview">
-    </div>
-    <div class="project-info">
-        <h3 class="project-title">Validador de Tags HTML</h3>
-        <p class="project-description">Algoritmo desenvolvido em C para checar a sintaxe e o aninhamento correto de tags HTML utilizando estruturas de dados.</p>
-        <div class="project-tags">
-            <span class="tag">C</span>
-            <span class="tag">HTML</span>
-            <span class="tag">Estrutura de Dados</span>
-        </div>
-        <a href="https://juliaaolv.github.io/htmlValidador/" target="_blank" class="project-link">Navegar no Site Live ↗</a>
-    </div>
-</div>
+            <!-- Projeto 3: Validador em C -->
+            <div class="project-card reveal hover-target">
+                <div class="preview-wrapper">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Validador de Tags HTML" class="project-preview">
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Validador de Tags HTML</h3>
+                    <p class="project-description">Algoritmo desenvolvido em C para checar a sintaxe e o aninhamento correto de tags HTML utilizando estruturas de dados.</p>
+                    <div class="project-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">Estrutura de Dados</span>
+                    </div>
+                    <a href="https://juliaaolv.github.io/htmlValidador/" target="_blank" class="project-link">Navegar no Site Live ↗</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer id="contato" class="reveal">
-        <h2>Vamos tirar sua ideia do papel?</h2>
-       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=oliveiramartinsjulia7@gmail.com" target="_blank" class="btn btn-primary hover-target">Iniciar conversa</a>
+    <section class="projects-section" id="estudio" style="background-color: var(--bg-primary);">
+        <div class="section-header reveal">
+            <h2>Personalize o Visual </h2>
+            <p>Altere as cores do site em tempo real mantendo a mesma estética.</p>
+        </div>
+
+        <div class="theme-picker-container reveal">
+            <button class="theme-chip active hover-target" onclick="changeTheme('default')">
+                <span class="dot-color dark-dot"></span> Dark Original
+            </button>
+            <button class="theme-chip hover-target" onclick="changeTheme('cyber')">
+                <span class="dot-color cyber-dot"></span> Cyber Neon
+            </button>
+            <button class="theme-chip hover-target" onclick="changeTheme('emerald')">
+                <span class="dot-color emerald-dot"></span> Emerald
+            </button>
+            <button class="theme-chip hover-target" onclick="changeTheme('light')">
+                <span class="dot-color light-dot"></span> Light Minimal
+            </button>
+        </div>
+    </section>
+
+    <!-- Rodapé Limpo e Original sem o botão de Contato -->
+    <section class="canvas-section-full reveal" id="canvas-lab">
+        <div class="section-header container reveal">
+            <h2>Canvas Interativo </h2>
+            <p>Interaja com a teia de partículas abaixo utilizando o mouse ou o toque no celular.</p>
+        </div>
+
+        <div class="canvas-full-wrapper reveal">
+            <div class="canvas-header-controls">
+                <div class="canvas-controls">
+                    <button class="canvas-btn hover-target" onclick="triggerGlowBurst()">Explosão Glow</button>
+                    <button class="canvas-btn active hover-target" onclick="resetTeia()">Teia Conectada</button>
+                    <button class="canvas-btn hover-target" onclick="clearCanvas()">Limpar Canvas</button>
+                </div>
+
+                <div class="color-picker-group">
+                    <span class="color-label">Cor da Teia:</span>
+                    <button class="color-btn active" style="background: #ff3b94;" onclick="setTeiaColor('#ff3b94')"></button>
+                    <button class="color-btn" style="background: #00f0ff;" onclick="setTeiaColor('#00f0ff')"></button>
+                    <button class="color-btn" style="background: #10b981;" onclick="setTeiaColor('#10b981')"></button>
+                    <button class="color-btn" style="background: #a855f7;" onclick="setTeiaColor('#a855f7')"></button>
+                    <button class="color-btn" style="background: #ffffff;" onclick="setTeiaColor('#ffffff')"></button>
+                </div>
+            </div>
+
+            <div class="canvas-container-full">
+                <canvas id="teiaCanvas"></canvas>
+                <div class="canvasHint"> Toque ou passe o mouse na tela</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="reveal">
         <p class="copyright">© 2026 Julia Oliveira. Desenvolvido com foco em performance e detalhe visual.</p>
     </footer>
 
