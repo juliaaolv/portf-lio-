@@ -15,7 +15,7 @@
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
     scroll-behavior: smooth;
-    cursor: none; /* Desativa o cursor padrão para o custom cursor */
+    cursor: none; 
 }
 
 body {
